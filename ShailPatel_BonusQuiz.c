@@ -14,15 +14,16 @@ int main()
     {
         printf("please enter the number of rows: ");
         scanf("%d", &rows);
-    } while (rows >= 2);
+    } while (!(rows >= 2 && rows <= 10));
     printf("printing a half pyramid of %d rows", rows);
     printf("\n");
-    for (int i = 1; i < rows; i++)
+    for (int i = 1; i <= rows; i++)
     {
-        for (int j = 1; j <= rows; j++)
+        for (int j = 1; j <= i; j++)
         {
-            printf("* ");
+            printf("%d ", i * j);
         }
+        printf("\n");
     }
     return 0;
 }
